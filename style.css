@@ -1,5 +1,6 @@
 :root {
   --bg: #fbfbf9;
+  --bg-image: none;
   --surface: #ffffff;
   --fg: #1b1b18;
   --muted: #6c6c63;
@@ -10,7 +11,13 @@
 }
 
 [data-theme="dark"] {
-  --bg: #14140f;
+  --bg: #050507;
+  --bg-image:
+    radial-gradient(80% 55% at 8% 0%, rgba(255, 46, 147, 0.22), transparent 68%),
+    radial-gradient(70% 50% at 96% 6%, rgba(0, 209, 255, 0.20), transparent 68%),
+    radial-gradient(65% 45% at 82% 52%, rgba(138, 92, 255, 0.18), transparent 68%),
+    radial-gradient(65% 45% at 2% 82%, rgba(255, 183, 3, 0.13), transparent 68%),
+    radial-gradient(70% 50% at 96% 102%, rgba(0, 255, 163, 0.15), transparent 68%);
   --surface: #1c1c17;
   --fg: #f2f2ec;
   --muted: #a3a39a;
@@ -26,7 +33,9 @@
 
 body {
   margin: 0;
-  background: var(--bg);
+  background-color: var(--bg);
+  background-image: var(--bg-image);
+  background-repeat: no-repeat;
   color: var(--fg);
   font-family: system-ui, -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
   line-height: 1.65;
