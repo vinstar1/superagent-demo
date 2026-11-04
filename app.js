@@ -4,7 +4,10 @@
   const toggle = document.getElementById('themeToggle');
   const saved = localStorage.getItem('aster-theme');
 
-  if (saved === 'dark') {
+  if (saved === 'light') {
+    root.removeAttribute('data-theme');
+    toggle.textContent = '深色';
+  } else {
     root.setAttribute('data-theme', 'dark');
     toggle.textContent = '浅色';
   }
